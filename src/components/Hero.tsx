@@ -1,0 +1,203 @@
+
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Download, Mail, Github, Linkedin } from 'lucide-react';
+import { useEffect, useState } from 'react';
+
+const Hero = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  const roles = [
+    'Software Engineering Student',
+    'Full Stack Developer',
+    'React Enthusiast',
+    'Problem Solver'
+  ];
+
+  // Typewriter effect
+  useEffect(() => {
+    const handleType = () => {
+      const i = loopNum % roles.length;
+      const fullText = roles[i];
+
+      setDisplayText(
+        isDeleting
+          ? fullText.substring(0, displayText.length - 1)
+          : fullText.substring(0, displayText.length + 1)
+      );
+
+      setTypingSpeed(isDeleting ? 30 : 150);
+
+      if (!isDeleting && displayText === fullText) {
+        setTimeout(() => setIsDeleting(true), 500);
+      } else if (isDeleting && displayText === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+    };
+
+    const timer = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, loopNum, typingSpeed, roles]);
+
+  // Floating particles animation variants
+  const particleVariants = {
+    animate: {
+      y: [0, -20, 0],
+      opacity: [0.3, 0.8, 0.3],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  return (
+    <section id="home" className="min-h-screen relative overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10"></div>
+      
+      {/* Floating particles */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-primary/20 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            variants={particleVariants}
+            animate="animate"
+            transition={{
+              delay: Math.random() * 2,
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Main content */}
+      <div className="relative z-10 container mx-auto px-4 pt-32 pb-16">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Greeting */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-6"
+          >
+            <span className="text-primary font-medium text-lg">Hello, I'm</span>
+          </motion.div>
+
+          {/* Name */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl md:text-7xl font-bold text-foreground mb-6"
+          >
+            Pasindu{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
+              Rvp
+            </span>
+          </motion.h1>
+
+          {/* Typewriter text */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl text-muted-foreground mb-8 h-8"
+          >
+            <span>{displayText}</span>
+            <span className="animate-pulse">|</span>
+          </motion.div>
+
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
+          >
+            Passionate about creating innovative web solutions and learning cutting-edge technologies. 
+            Currently pursuing Software Engineering at SLIIT with a focus on full-stack development.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          >
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+            >
+              <Download className="mr-2 h-5 w-5" />
+              Download CV
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+            >
+              <Mail className="mr-2 h-5 w-5" />
+              Contact Me
+            </Button>
+          </motion.div>
+
+          {/* Social Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="flex justify-center space-x-6"
+          >
+            {[
+              { icon: Github, href: '#', label: 'GitHub' },
+              { icon: Linkedin, href: '#', label: 'LinkedIn' },
+              { icon: Mail, href: '#', label: 'Email' }
+            ].map((social, index) => (
+              <motion.a
+                key={social.label}
+                href={social.href}
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-12 h-12 rounded-full bg-muted hover:bg-primary flex items-center justify-center text-muted-foreground hover:text-primary-foreground transition-all duration-300 shadow-md hover:shadow-lg"
+                aria-label={social.label}
+              >
+                <social.icon className="h-5 w-5" />
+              </motion.a>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center">
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="w-1 h-3 bg-muted-foreground rounded-full mt-2"
+          />
+        </div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default Hero;
