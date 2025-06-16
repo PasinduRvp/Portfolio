@@ -17,6 +17,7 @@ const Skills = () => {
         { name: 'JavaScript', level: 88, color: 'bg-yellow-500' }
       ]
     },
+    
     backend: {
       title: 'Backend Development',
       skills: [
