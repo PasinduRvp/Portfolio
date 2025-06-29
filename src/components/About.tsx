@@ -54,7 +54,7 @@ const About = () => {
                 {/* Profile image placeholder */}
                 <div className="relative w-full h-full rounded-full shadow-2xl overflow-hidden">
                   <img
-                      src="public/pro6.jpeg"
+                      src="/pro6.jpeg"
                       alt="Profile"
                       className="w-full h-full object-cover"
                     />
