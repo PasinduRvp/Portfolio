@@ -6,62 +6,42 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment integration, inventory management, and admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe API', 'JWT'],
+      title: 'Hospital Management System',
+      description: 'Developed a Hospital Management System with patient/staff management, appointment scheduling , pharmacy/lab systems , nursing school integration , and a secure role  based admin dashboard. Optimizes hospital operations for better efficiency.',
+      image: 'public/pro2.jpg',
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
       demoUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/PasinduRvp/Hospital-Laboratory-Pharmacy_Management_System.git',
       featured: true
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features built using React and Firebase.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop',
-      technologies: ['React', 'Firebase', 'Material-UI', 'Context API', 'Real-time DB'],
+      title: 'Financial Tracking App',
+      description: 'Designed and developed a personal finance management Android app with income/expense tracking , budgeting , and spending insights. Includes smart notifications , data persistence , and optional backup/restore functionality.',
+      image: 'public/f1.png',
+      technologies: ['Kotlin', 'XML', 'SQLite'],
       demoUrl: '#',
-      githubUrl: '#',
-      featured: false
+      githubUrl: 'https://github.com/PasinduRvp/Financial_Tracking_Application.git',
+      featured: true
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'A responsive weather application that provides current weather conditions, forecasts, and interactive maps using OpenWeather API and Chart.js for data visualization.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop',
-      technologies: ['React', 'TypeScript', 'Chart.js', 'OpenWeather API', 'Tailwind CSS'],
+      title: 'NOURA Fashion Store',
+      description: 'Developed a full-featured online fashion store with user account management , product catalog , shopping cart , Review system and secure session-based authentication.',
+      image: 'public/pro4.jpg',
+      technologies: ['PHP', 'CSS', 'JavaScript', 'MySQL'],
       demoUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'Social Media Dashboard',
-      description: 'A comprehensive social media analytics dashboard with data visualization, user engagement metrics, and automated reporting features.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop',
-      technologies: ['Next.js', 'PostgreSQL', 'Prisma', 'Chart.js', 'NextAuth.js'],
-      demoUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/PasinduRvp/Fashion_Store.git',
       featured: true
     },
     {
       id: 5,
-      title: 'Recipe Finder App',
-      description: 'A mobile-responsive recipe application with search functionality, meal planning, shopping list generation, and nutritional information tracking.',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=300&fit=crop',
-      technologies: ['React', 'Redux', 'Spoonacular API', 'PWA', 'Local Storage'],
+      title: 'Melody Mart Music Instrument Store',
+      description: 'Developed a feature-rich mobile commerce app for musical instruments , with wishlist , cart , order tracking , secure authentication , and multi-option payment integration to enhance user shopping experience.',
+      image: 'public/m1.png',
+      technologies: ['Kotlin', 'XML', 'SQLite'],
       demoUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website built with React and Framer Motion. Features smooth animations, dark mode, and optimized performance.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop',
-      technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'TypeScript', 'Vite'],
-      demoUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/PasinduRvp/Music_Instrument_Store.git',
       featured: false
     }
   ];
@@ -77,7 +57,7 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Featured <span className="text-primary">Projects</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-700">Featured Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and passion for development
@@ -87,7 +67,7 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto">
           {/* Featured Projects */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">🌟 Featured Projects</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">🌟 Newest Projects</h3>
             <div className="grid lg:grid-cols-2 gap-8">
               {projects.filter(project => project.featured).map((project, index) => (
                 <motion.div
@@ -126,23 +106,27 @@ const Projects = () => {
                       ))}
                     </div>
                     
-                    <div className="flex gap-4">
-                      <Button
-                        variant="default"
-                        size="sm"
-                        className="flex-1 bg-primary hover:bg-primary/90"
-                      >
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                      >
-                        <Github className="mr-2 h-4 w-4" />
-                        GitHub
-                      </Button>
+                    <div className="flex gap-6" >
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          variant="default"
+                          size="sm"
+                          className="flex-1 bg-primary hover:bg-primary/90"
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Live Demo
+                        </Button>
+                      </a>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                        >
+                          <Github className="mr-2 h-4 w-4" />
+                          GitHub
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </motion.div>
@@ -152,7 +136,7 @@ const Projects = () => {
 
           {/* Other Projects */}
           <div>
-            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Other Projects</h3>
+            <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Other Projects</h2>
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
               {projects.filter(project => !project.featured).map((project, index) => (
                 <motion.div
@@ -180,31 +164,34 @@ const Projects = () => {
                       {project.description}
                     </p>
                     
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {project.technologies.slice(0, 3).map((tech) => (
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2 py-1 bg-muted text-muted-foreground rounded text-xs"
+                          className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20"
                         >
                           {tech}
                         </span>
                       ))}
-                      {project.technologies.length > 3 && (
-                        <span className="px-2 py-1 bg-muted text-muted-foreground rounded text-xs">
-                          +{project.technologies.length - 3} more
-                        </span>
-                      )}
                     </div>
                     
                     <div className="flex gap-2">
-                      <Button variant="outline" size="sm" className="flex-1 text-xs">
-                        <ExternalLink className="mr-1 h-3 w-3" />
-                        Demo
-                      </Button>
-                      <Button variant="outline" size="sm" className="flex-1 text-xs">
-                        <Github className="mr-1 h-3 w-3" />
-                        Code
-                      </Button>
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          variant="default"
+                          size="sm"
+                          className="flex-1 bg-primary hover:bg-primary/90"
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Live Demo
+                        </Button>
+                      </a>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="sm" className="flex-1">
+                          <Github className="mr-1 h-3 w-3" />
+                          GitHub
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </motion.div>
@@ -218,17 +205,23 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mt-16 p-8 bg-card rounded-2xl border border-border"
+            className="text-center mt-16 p-8 bg-card rounded-2xl border border-border shadow-2xl"
           >
             <h3 className="text-2xl font-bold text-foreground mb-4">Want to see more?</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               These are just a few highlights from my portfolio. Check out my GitHub 
               for more projects and contributions to open-source repositories.
             </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              <Github className="mr-2 h-5 w-5" />
-              View All Projects on GitHub
-            </Button>
+            <a
+              href="https://github.com/PasinduRvp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Github className="mr-2 h-5 w-5" />
+                View All Projects on GitHub
+              </Button>
+            </a>
           </motion.div>
         </div>
       </div>

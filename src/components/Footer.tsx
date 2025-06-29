@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
@@ -98,8 +97,10 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold text-foreground mb-4">Get In Touch</h4>
             <div className="space-y-3 text-muted-foreground">
-              <p>📍 Colombo, Sri Lanka</p>
-              <p>📧 pasindu@example.com</p>
+              <p>📍 Matara, Sri Lanka</p>
+              <p>
+                📧 <a href="mailto:rvppasindu@example.com" className="hover:underline">rvppasindu@example.com</a>
+              </p>
               <p>🎓 SLIIT - Software Engineering</p>
             </div>
             
@@ -120,17 +121,10 @@ const Footer = () => {
           viewport={{ once: true }}
           className="border-t border-border mt-8 pt-8"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center text-muted-foreground text-sm mb-4 md:mb-0">
-              <span>© {currentYear} Pasindu Rvp. Built with</span>
-              <Heart className="h-4 w-4 text-red-500 mx-1 animate-pulse" />
-              <span>using React & Tailwind CSS</span>
-            </div>
-            
-            <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-              <span>Made with ❤️ in Sri Lanka</span>
-            </div>
+          <div className="w-full flex justify-center items-center text-muted-foreground text-sm mb-4 md:mb-0">
+            <span>© {currentYear} Pasindu Vidanapathirana</span>
           </div>
+
         </motion.div>
       </div>
     </footer>

@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download, Mail, Github, Linkedin } from 'lucide-react';
@@ -11,9 +10,9 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
-    'Software Engineering Student',
+    'Software Engineer',
     'Full Stack Developer',
-    'React Enthusiast',
+    'Mobile Application Developer',
     'Problem Solver'
   ];
 
@@ -56,6 +55,18 @@ const Hero = () => {
     }
   };
 
+  const handleDownloadCV = () => {
+    // Replace 'your-cv.pdf' with your actual CV file path in the public folder
+    const cvUrl = '/Pasindu Vidanapathirana.pdf';
+    
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'Pasindu_Vidanapathirana_CV.pdf'; // Name you want the downloaded file to have
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
       {/* Background gradient */}
@@ -83,101 +94,140 @@ const Hero = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 container mx-auto px-4 pt-32 pb-16">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Greeting */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-6"
-          >
-            <span className="text-primary font-medium text-lg">Hello, I'm</span>
-          </motion.div>
-
-          {/* Name */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold text-foreground mb-6"
-          >
-            Pasindu{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
-              Rvp
-            </span>
-          </motion.h1>
-
-          {/* Typewriter text */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-8 h-8"
-          >
-            <span>{displayText}</span>
-            <span className="animate-pulse">|</span>
-          </motion.div>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
-          >
-            Passionate about creating innovative web solutions and learning cutting-edge technologies. 
-            Currently pursuing Software Engineering at SLIIT with a focus on full-stack development.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-          >
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
-            >
-              <Download className="mr-2 h-5 w-5" />
-              Download CV
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
-            >
-              <Mail className="mr-2 h-5 w-5" />
-              Contact Me
-            </Button>
-          </motion.div>
-
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="flex justify-center space-x-6"
-          >
-            {[
-              { icon: Github, href: '#', label: 'GitHub' },
-              { icon: Linkedin, href: '#', label: 'LinkedIn' },
-              { icon: Mail, href: '#', label: 'Email' }
-            ].map((social, index) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 rounded-full bg-muted hover:bg-primary flex items-center justify-center text-muted-foreground hover:text-primary-foreground transition-all duration-300 shadow-md hover:shadow-lg"
-                aria-label={social.label}
+      <div className="relative z-10 container mx-auto px-4 pt-24 pb-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Left side content */}
+            <div className="flex-1 text-center lg:text-left">
+              {/* Greeting */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="mb-6"
               >
-                <social.icon className="h-5 w-5" />
-              </motion.a>
-            ))}
-          </motion.div>
+                <span className="text-primary font-medium text-lg">Hello, I'm</span>
+              </motion.div>
+
+              {/* Name */}
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-5xl md:text-7xl font-bold text-foreground mb-6"
+              >
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-700">Pasindu</span>{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-700">
+                  Vidanapathirana
+                </span>
+              </motion.h1>
+
+              {/* Typewriter text */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-xl md:text-2xl text-muted-foreground mb-8 h-8"
+              >
+                <span>{displayText}</span>
+                <span className="animate-pulse">|</span>
+              </motion.div>
+
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
+              >
+                Software Engineering undergraduate at SLIIT with a passion for full-stack development and emerging technologies. Actively seeking an internship to apply my skills and gain hands-on industry experience.
+              </motion.p>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+              >
+                {/* Update the Download CV button */}
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+                  onClick={handleDownloadCV}
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Download CV
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+                  asChild
+                >
+                  <a href="mailto:rvppasindu@gmail.com">
+                    <Mail className="mr-2 h-5 w-5" />
+                    Contact Me
+                  </a>
+                </Button>
+              </motion.div>
+
+              {/* Social Links */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                className="flex justify-center space-x-6"
+              >
+                {[
+                  { icon: Github, href: 'https://github.com/PasinduRvp?tab=repositories', label: 'GitHub' },
+                  { icon: Linkedin, href: 'https://www.linkedin.com/in/pasindu-vidanapathirana-094b56343', label: 'LinkedIn' },
+                  { icon: Mail, href: 'rvppasindu@gmail.com', label: 'Email' }
+                ].map((social, index) => (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-12 h-12 rounded-full bg-muted hover:bg-primary flex items-center justify-center text-muted-foreground hover:text-primary-foreground transition-all duration-300 shadow-md hover:shadow-lg"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="h-5 w-5" />
+                  </motion.a>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Right side - Profile Picture */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="relative pt-8 md:pt-31 md:pt-9"
+            >
+              <div className="relative w-64 h-64 md:w-80 md:h-80">
+                {/* Glowing background effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-blue-300/30 rounded-full blur-2xl opacity-70"></div>
+                
+                {/* Profile image */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl w-full h-full"
+                >
+                  <img
+                    src="/pic2.jpg"
+                    alt="Pasindu Vidanapathirana"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </motion.div>
+
+                {/* Decorative circles */}
+                <div className="absolute -top-4 -right-4 w-24 h-24 border-2 border-primary/60 rounded-full"></div>
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 border-2 border-blue-900/50 rounded-full"></div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
 

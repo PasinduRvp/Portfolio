@@ -1,61 +1,65 @@
-
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Send, MapPin, Phone, Mail, Github, Linkedin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setStatus('sending');
+    if (!form.current) return;
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon!",
-      });
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
+    emailjs
+      .sendForm(
+        'service_dlvmpgr',      // Replace with your EmailJS service ID
+        'template_09mru0n',     // Replace with your EmailJS template ID
+        form.current,
+        'csZd2z4jno7I0lAv1'       // Replace with your EmailJS public key
+      )
+      .then(
+        () => {
+          setStatus('success');
+          toast({
+            title: "Message sent successfully!",
+            description: "Thank you for your message. I'll get back to you soon!",
+          });
+        },
+        () => {
+          setStatus('error');
+          toast({
+            title: "Error",
+            description: "There was an error sending your message. Please try again later.",
+            variant: "destructive",
+          });
+        }
+      );
   };
 
   const contactInfo = [
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Colombo, Sri Lanka',
+      value: 'Matara, Sri Lanka',
       color: 'text-red-500'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+94 XX XXX XXXX',
+      value: '+94 76 040 0525',
       color: 'text-green-500'
     },
     {
       icon: Mail,
       label: 'Email',
-      value: 'pasindu@example.com',
+      value: 'rvppasindu@gmail.com',
       color: 'text-blue-500'
     }
   ];
@@ -64,19 +68,19 @@ const Contact = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: '#',
+      href: 'https://github.com/PasinduRvp?tab=repositories',
       color: 'hover:bg-gray-900 hover:text-white'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: '#',
+      href: 'https://www.linkedin.com/in/pasindu-vidanapathirana-094b56343',
       color: 'hover:bg-blue-600 hover:text-white'
     },
     {
       icon: Mail,
       label: 'Email',
-      href: '#',
+      href: 'mailto:rvppasindu@gmail.com',
       color: 'hover:bg-red-500 hover:text-white'
     }
   ];
@@ -92,7 +96,7 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Get In <span className="text-primary">Touch</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-700">Get In Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind or want to discuss opportunities? 
@@ -146,6 +150,8 @@ const Contact = () => {
                     <motion.a
                       key={social.label}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -172,18 +178,16 @@ const Contact = () => {
             >
               <h3 className="text-2xl font-bold text-foreground mb-6">Send a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Full Name
                   </label>
                   <Input
                     id="name"
-                    name="name"
+                    name="user_name"
                     type="text"
                     required
-                    value={formData.name}
-                    onChange={handleInputChange}
                     placeholder="Your full name"
                     className="w-full"
                   />
@@ -195,11 +199,9 @@ const Contact = () => {
                   </label>
                   <Input
                     id="email"
-                    name="email"
+                    name="user_email"
                     type="email"
                     required
-                    value={formData.email}
-                    onChange={handleInputChange}
                     placeholder="your.email@example.com"
                     className="w-full"
                   />
@@ -213,8 +215,6 @@ const Contact = () => {
                     id="message"
                     name="message"
                     required
-                    value={formData.message}
-                    onChange={handleInputChange}
                     placeholder="Tell me about your project or say hello!"
                     rows={6}
                     className="w-full resize-none"
@@ -227,10 +227,10 @@ const Contact = () => {
                 >
                   <Button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={status === 'sending'}
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg font-medium"
                   >
-                    {isSubmitting ? (
+                    {status === 'sending' ? (
                       <div className="flex items-center">
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                         Sending...
@@ -250,6 +250,13 @@ const Contact = () => {
                   🚀 <strong>Quick Response:</strong> I typically respond within 24 hours
                 </p>
               </div>
+
+              {status === 'success' && (
+                <p className="text-green-600 text-center mt-2">Message sent successfully!</p>
+              )}
+              {status === 'error' && (
+                <p className="text-red-600 text-center mt-2">Failed to send message. Try again.</p>
+              )}
             </motion.div>
           </div>
         </div>

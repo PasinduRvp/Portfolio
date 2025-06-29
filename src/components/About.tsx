@@ -4,10 +4,10 @@ import { GraduationCap, Code, Coffee, Users } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: GraduationCap, label: 'Education', value: '2nd Year Student' },
-    { icon: Code, label: 'Projects', value: '15+ Completed' },
+    { icon: GraduationCap, label: 'Education', value: '3rd Year Student' },
+    { icon: Code, label: 'Projects', value: '6+ Completed' },
     { icon: Coffee, label: 'Coffee Cups', value: '500+ Consumed' },
-    { icon: Users, label: 'Team Projects', value: '8+ Collaborations' }
+    { icon: Users, label: 'Team Projects', value: '3+ Collaborations' }
   ];
 
   const interests = [
@@ -15,8 +15,8 @@ const About = () => {
     'Mobile Apps',
     'UI/UX Design',
     'Cloud Computing',
-    'DevOps',
-    'Machine Learning'
+    'Machine Learning',
+    'Artificial Intelligence'
   ];
 
   return (
@@ -30,7 +30,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About <span className="text-primary">Me</span>
+            <span className="text-primary"><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-700">About Me</span></span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Get to know more about my journey, education, and what drives my passion for technology
@@ -52,9 +52,14 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-full animate-pulse-slow"></div>
                 
                 {/* Profile image placeholder */}
-                <div className="relative w-full h-full bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center text-6xl font-bold text-white shadow-2xl">
-                  PR
+                <div className="relative w-full h-full rounded-full shadow-2xl overflow-hidden">
+                  <img
+                      src="public/pro6.jpeg"
+                      alt="Profile"
+                      className="w-full h-full object-cover"
+                    />
                 </div>
+
                 
                 {/* Floating decorations */}
                 <motion.div
@@ -83,22 +88,15 @@ const About = () => {
               
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
                 <p>
-                  I'm a passionate software engineering student currently in my 2nd year at 
-                  Sri Lanka Institute of Information Technology (SLIIT). My journey in 
-                  technology began with curiosity and has evolved into a deep passion for 
-                  creating innovative solutions.
+                  I'm a passionate Software Engineering student at the Sri Lanka Institute of Information Technology (SLIIT), having completed two years and earned a diploma. I’m currently pursuing my degree with an expected graduation in 2027.
                 </p>
                 
                 <p>
-                  I specialize in full-stack web development with a strong focus on modern 
-                  technologies like React, Node.js, and cloud platforms. I enjoy tackling 
-                  complex problems and turning ideas into reality through code.
+                  I specialize in full-stack web development with hands-on experience in technologies like React, Node.js, and cloud platforms. I also have a strong grasp of mobile app development using XML, Kotlin, and Android Studio, enabling me to create intuitive and responsive apps.
                 </p>
                 
                 <p>
-                  When I'm not coding, you'll find me exploring new technologies, 
-                  contributing to open-source projects, or collaborating with fellow 
-                  developers on exciting projects.
+                  Beyond coding, I enjoy exploring emerging technologies, contributing to open-source projects, and collaborating on innovative solutions with fellow developers.
                 </p>
               </div>
 
