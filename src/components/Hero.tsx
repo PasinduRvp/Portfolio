@@ -216,7 +216,7 @@ const Hero = () => {
                   className="relative rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl w-full h-full"
                 >
                   <img
-                    src="/pic2.jpg"
+                    src="/m5.jpg"
                     alt="Pasindu Vidanapathirana"
                     className="w-full h-full object-cover rounded-full"
                   />
