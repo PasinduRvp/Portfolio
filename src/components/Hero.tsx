@@ -182,7 +182,7 @@ const Hero = () => {
                 {[
                   { icon: Github, href: 'https://github.com/PasinduRvp?tab=repositories', label: 'GitHub' },
                   { icon: Linkedin, href: 'https://www.linkedin.com/in/pasindu-vidanapathirana-094b56343', label: 'LinkedIn' },
-                  { icon: Mail, href: 'rvppasindu@gmail.com', label: 'Email' }
+                  { icon: Mail, href: 'mailto:rvppasindu@gmail.com', label: 'Email' }
                 ].map((social, index) => (
                   <motion.a
                     key={social.label}
