@@ -61,7 +61,7 @@ const Hero = () => {
     
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'Pasindu_Vidanapathirana_CV.pdf'; // Name you want the downloaded file to have
+    link.download = 'Pasindu_Vidanapathirana_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -150,7 +150,6 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
               >
-                {/* Update the Download CV button */}
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
@@ -198,33 +197,116 @@ const Hero = () => {
               </motion.div>
             </div>
 
-            {/* Right side - Profile Picture */}
+            {/* Right side - Animated Profile Picture */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="relative pt-8 md:pt-31 md:pt-9"
+              className="relative pt-8 md:pt-0"
             >
-              <div className="relative w-64 h-64 md:w-80 md:h-80">
-                {/* Glowing background effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-blue-300/30 rounded-full blur-2xl opacity-70"></div>
+              <div className="relative w-80 h-80 md:w-96 md:h-96 flex items-center justify-center">
+                {/* Dark background with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-full opacity-20"></div>
                 
-                {/* Profile image */}
+                {/* Animated outer ring segments */}
+                <div className="absolute inset-0">
+                  {/* Top arc */}
+                  <motion.div
+                    className="absolute inset-0 rounded-full border-4 border-transparent"
+                    style={{
+                      borderTopColor: '#00008B',
+                      borderRightColor: '#00008B',
+                      borderTopWidth: '6px',
+                      borderRightWidth: '6px',
+                    }}
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                  />
+                  
+                  {/* Bottom arc */}
+                  <motion.div
+                    className="absolute inset-4 rounded-full border-4 border-transparent"
+                    style={{
+                      borderBottomColor: '#708090',
+                      borderLeftColor: '#708090',
+                      borderBottomWidth: '4px',
+                      borderLeftWidth: '4px',
+                    }}
+                    animate={{ rotate: -360 }}
+                    transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                  />
+                  
+                  {/* Inner rotating segments */}
+                  <motion.div
+                    className="absolute inset-8 rounded-full border-2 border-transparent"
+                    style={{
+                      borderTopColor: '#0000CD',
+                      borderRightColor: '#0000CD',
+                      borderTopWidth: '3px',
+                      borderRightWidth: '3px',
+                    }}
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                  />
+                </div>
+                
+                {/* Profile image container */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
-                  className="relative rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl w-full h-full"
+                  className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white/50 shadow-2xl z-10"
                 >
+                  {/* Profile image */}
                   <img
-                    src="/m5.jpg"
+                    src="/p1.png"
                     alt="Pasindu Vidanapathirana"
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-cover"
                   />
+                  
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                 </motion.div>
-
-                {/* Decorative circles */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 border-2 border-primary/60 rounded-full"></div>
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 border-2 border-blue-900/50 rounded-full"></div>
+                
+                {/* Floating particles around the image */}
+                <div className="absolute inset-0">
+                  {[...Array(8)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="absolute w-2 h-2 bg-blue-800 rounded-full"
+                      style={{
+                        left: `${50 + 45 * Math.cos((i * Math.PI * 2) / 8)}%`,
+                        top: `${50 + 45 * Math.sin((i * Math.PI * 2) / 8)}%`,
+                      }}
+                      animate={{
+                        scale: [0.5, 1, 0.5],
+                        opacity: [0.3, 0.8, 0.3],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        delay: (i * 0.2),
+                      }}
+                    />
+                  ))}
+                </div>
+                
+                {/* Decorative arc segments */}
+                <div className="absolute -inset-4">
+                  <motion.div
+                    className="absolute inset-0 rounded-full"
+                    style={{
+                      background: 'conic-gradient(from 0deg, transparent 0deg, #3b82f6 60deg, transparent 120deg)',
+                      mask: 'radial-gradient(circle, transparent 85%, black 86%, black 90%, transparent 91%)',
+                    }}
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                  />
+                </div>
+                
+                {/* Static decorative circles */}
+                <div className="absolute -top-6 -right-6 w-12 h-12 border-2 border-blue-700/40 rounded-full"></div>
+                <div className="absolute -bottom-6 -left-6 w-16 h-16 border-2 border-cyan-800/30 rounded-full"></div>
+                <div className="absolute top-4 -left-8 w-8 h-8 border-2 border-purple-700/40 rounded-full"></div>
               </div>
             </motion.div>
           </div>
