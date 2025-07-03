@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Download, Mail, Github, Linkedin } from 'lucide-react';
+import { Download, Mail, Github, Linkedin, Instagram, Facebook } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
@@ -95,8 +95,8 @@ const Hero = () => {
 
       {/* Main content */}
       <div className="relative z-10 container mx-auto px-4 pt-24 pb-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             {/* Left side content */}
             <div className="flex-1 text-center lg:text-left">
               {/* Greeting */}
@@ -138,7 +138,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
+                className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
               >
                 Software Engineering undergraduate at SLIIT with a passion for full-stack development and emerging technologies. Actively seeking an internship to apply my skills and gain hands-on industry experience.
               </motion.p>
@@ -148,7 +148,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               >
                 <Button
                   size="lg"
@@ -170,39 +170,14 @@ const Hero = () => {
                   </a>
                 </Button>
               </motion.div>
-
-              {/* Social Links */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1 }}
-                className="flex justify-center space-x-6"
-              >
-                {[
-                  { icon: Github, href: 'https://github.com/PasinduRvp?tab=repositories', label: 'GitHub' },
-                  { icon: Linkedin, href: 'https://www.linkedin.com/in/pasindu-nimsara-vidanapathirana-133b04370/', label: 'LinkedIn' },
-                  { icon: Mail, href: 'mailto:rvppasindu@gmail.com', label: 'Email' }
-                ].map((social, index) => (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-12 h-12 rounded-full bg-muted hover:bg-primary flex items-center justify-center text-muted-foreground hover:text-primary-foreground transition-all duration-300 shadow-md hover:shadow-lg"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="h-5 w-5" />
-                  </motion.a>
-                ))}
-              </motion.div>
             </div>
 
-            {/* Right side - Animated Profile Picture */}
+            {/* Center - Animated Profile Picture */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="relative pt-8 md:pt-0"
+              className="relative pt-8 md:pt-0 lg:-ml-8 xl:-ml-12"
             >
               <div className="relative w-80 h-80 md:w-96 md:h-96 flex items-center justify-center">
                 {/* Dark background with gradient */}
@@ -307,6 +282,139 @@ const Hero = () => {
                 <div className="absolute -top-6 -right-6 w-12 h-12 border-2 border-blue-700/40 rounded-full"></div>
                 <div className="absolute -bottom-6 -left-6 w-16 h-16 border-2 border-cyan-800/30 rounded-full"></div>
                 <div className="absolute top-4 -left-8 w-8 h-8 border-2 border-purple-700/40 rounded-full"></div>
+              </div>
+            </motion.div>
+
+            {/* Right side - Social Links with Vertical Line */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="relative flex flex-col items-center"
+            >
+              {/* Animated vertical line */}
+              <motion.div 
+                className="absolute left-1/2 transform -translate-x-1/2 w-px h-96 bg-gradient-to-b from-transparent via-muted-foreground/30 to-transparent"
+                initial={{ height: 0 }}
+                animate={{ height: '24rem' }}
+                transition={{ duration: 1.5, delay: 1.5 }}
+              />
+              
+              {/* Social icons */}
+              <div className="flex flex-col space-y-6 relative z-10">
+                {[
+                  { icon: Github, href: 'https://github.com/PasinduRvp?tab=repositories', label: 'GitHub', color: 'hover:bg-gray-800' },
+                  { icon: Linkedin, href: 'https://www.linkedin.com/in/pasindu-nimsara-vidanapathirana-a3b9a1371/', label: 'LinkedIn', color: 'hover:bg-blue-600' },
+                  { icon: Mail, href: 'mailto:rvppasindu@gmail.com', label: 'Email', color: 'hover:bg-red-500' },
+                  { icon: Instagram, href: 'https://www.instagram.com/__.rvp.pn.__/profilecard/?igsh=YW5tMmQ0MjB3YTRl/', label: 'Instagram', color: 'hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500' },
+                  { icon: Facebook, href: 'https://www.facebook.com/share/16rmG2nMNe/', label: 'Facebook', color: 'hover:bg-blue-700' }
+                ].map((social, index) => (
+                  <motion.div
+                    key={social.label}
+                    initial={{ opacity: 0, x: 50, scale: 0.8 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    transition={{ 
+                      delay: 1.8 + index * 0.2,
+                      duration: 0.6,
+                      type: "spring",
+                      stiffness: 100,
+                      damping: 10
+                    }}
+                    className="relative group"
+                  >
+                    {/* Hover background pulse effect */}
+                    <motion.div
+                      className="absolute inset-0 rounded-full bg-primary/10"
+                      initial={{ scale: 0, opacity: 0 }}
+                      whileHover={{ scale: 1.3, opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                    
+                    {/* Icon container */}
+                    <motion.a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ 
+                        scale: 1.15,
+                        x: -8,
+                        rotateZ: 5
+                      }}
+                      whileTap={{ 
+                        scale: 0.9,
+                        rotateZ: -5
+                      }}
+                      className={`relative w-14 h-14 rounded-full bg-muted ${social.color} flex items-center justify-center text-muted-foreground hover:text-white transition-all duration-300 shadow-lg hover:shadow-2xl border-2 border-transparent hover:border-white/20 backdrop-blur-sm`}
+                      aria-label={social.label}
+                    >
+                      {/* Icon glow effect */}
+                      <motion.div
+                        className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-blue-500/20"
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                      
+                      {/* Rotating border */}
+                      <motion.div
+                        className="absolute inset-0 rounded-full border-2 border-transparent"
+                        style={{
+                          background: 'linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.5), transparent)',
+                          mask: 'radial-gradient(circle, transparent 85%, black 86%, black 90%, transparent 91%)',
+                        }}
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                      />
+                      
+                      {/* Icon with bounce animation */}
+                      <motion.div
+                        whileHover={{ y: -2 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        className="relative z-10"
+                      >
+                        <social.icon className="h-6 w-6" />
+                      </motion.div>
+                    </motion.a>
+                    
+                    {/* Tooltip */}
+                    <motion.div
+                      className="absolute left-full ml-4 px-3 py-1 bg-foreground text-background text-sm rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                      initial={{ x: -10, opacity: 0 }}
+                      whileHover={{ x: 0, opacity: 1 }}
+                      style={{ top: '50%', transform: 'translateY(-50%)' }}
+                    >
+                      {social.label}
+                      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1 w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-foreground" />
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </div>
+              
+              
+              
+              {/* Floating particles around social icons */}
+              <div className="absolute inset-0 pointer-events-none">
+                {[...Array(6)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-1 h-1 bg-primary/40 rounded-full"
+                    style={{
+                      left: `${30 + Math.random() * 40}%`,
+                      top: `${20 + Math.random() * 60}%`,
+                    }}
+                    animate={{
+                      y: [0, -10, 0],
+                      x: [0, 5, 0],
+                      opacity: [0.2, 0.8, 0.2],
+                      scale: [0.5, 1, 0.5],
+                    }}
+                    transition={{
+                      duration: 3 + Math.random() * 2,
+                      repeat: Infinity,
+                      delay: Math.random() * 2,
+                    }}
+                  />
+                ))}
               </div>
             </motion.div>
           </div>
