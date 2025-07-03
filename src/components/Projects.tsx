@@ -28,7 +28,7 @@ const Projects = () => {
       id: 3,
       title: 'NOURA Fashion Store',
       description: 'Developed a full-featured online fashion store with user account management , product catalog , shopping cart , Review system and secure session-based authentication.',
-      image: '/pro4.jpg',
+      image: '/fa1.png',
       technologies: ['PHP', 'CSS', 'JavaScript', 'MySQL'],
       demoUrl: '#',
       githubUrl: 'https://github.com/PasinduRvp/Fashion_Store.git',
