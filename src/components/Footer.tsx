@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Mail, href: '#', label: 'Email' }
+    { icon: Github, href: 'https://github.com/PasinduRvp?tab=repositories', label: 'GitHub', color: 'hover:bg-gray-800' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/pasindu-vidanapathirana-a3b9a1371/', label: 'LinkedIn', color: 'hover:bg-blue-600' },
+    { icon: Mail, href: 'mailto:rvppasindu@gmail.com', label: 'Email', color: 'hover:bg-red-500' },
+    { icon: Instagram, href: 'https://www.instagram.com/__.rvp.pn.__/profilecard/?igsh=YW5tMmQ0MjB3YTRl/', label: 'Instagram', color: 'hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500' },
+    { icon: Facebook, href: 'https://www.facebook.com/share/16rmG2nMNe/', label: 'Facebook', color: 'hover:bg-blue-700' }
   ];
 
   const quickLinks = [
@@ -48,20 +50,80 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
-                <motion.a
+                <motion.div
                   key={social.label}
-                  href={social.href}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 rounded-full bg-background hover:bg-primary flex items-center justify-center text-muted-foreground hover:text-primary-foreground transition-all duration-300 shadow-sm hover:shadow-md"
-                  aria-label={social.label}
+                  initial={{ opacity: 0, x: 50, scale: 0.8 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  transition={{ 
+                    delay: 0.3 + index * 0.2,
+                    duration: 0.6,
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 10
+                  }}
+                  className="relative group"
                 >
-                  <social.icon className="h-5 w-5" />
-                </motion.a>
+                  {/* Hover background pulse effect */}
+                  <motion.div
+                    className="absolute inset-0 rounded-full bg-primary/10"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileHover={{ scale: 1.3, opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  {/* Icon container */}
+                  <motion.a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ 
+                      scale: 1.15,
+                      y: -8,
+                      rotateZ: 5
+                    }}
+                    whileTap={{ 
+                      scale: 0.9,
+                      rotateZ: -5
+                    }}
+                    className={`relative w-12 h-12 rounded-full bg-background ${social.color} flex items-center justify-center text-muted-foreground hover:text-white transition-all duration-300 shadow-lg hover:shadow-2xl border-2 border-transparent hover:border-white/20 backdrop-blur-sm`}
+                    aria-label={social.label}
+                  >
+                    {/* Icon glow effect */}
+                    <motion.div
+                      className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-blue-500/20"
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                    {/* Rotating border */}
+                    <motion.div
+                      className="absolute inset-0 rounded-full border-2 border-transparent"
+                      style={{
+                        background: 'linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.5), transparent)',
+                        mask: 'radial-gradient(circle, transparent 85%, black 86%, black 90%, transparent 91%)',
+                      }}
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    />
+                    {/* Icon with bounce animation */}
+                    <motion.div
+                      whileHover={{ y: -2 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      className="relative z-10"
+                    >
+                      <social.icon className="h-5 w-5" />
+                    </motion.div>
+                  </motion.a>
+                  {/* Tooltip */}
+                  <motion.div
+                    className="absolute left-full ml-4 px-3 py-1 bg-foreground text-background text-sm rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    initial={{ x: -10, opacity: 0 }}
+                    whileHover={{ x: 0, opacity: 1 }}
+                    style={{ top: '50%', transform: 'translateY(-50%)' }}
+                  >
+                    {social.label}
+                    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1 w-0 h-0 border-t-4 border-b-4 border-r-4 border-transparent border-r-foreground" />
+                  </motion.div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
@@ -99,7 +161,7 @@ const Footer = () => {
             <div className="space-y-3 text-muted-foreground">
               <p>📍 Matara, Sri Lanka</p>
               <p>
-                📧 <a href="mailto:rvppasindu@example.com" className="hover:underline">rvppasindu@example.com</a>
+                📧 <a href="mailto:rvppasindu@gmail.com" className="hover:underline">rvppasindu@gmail.com</a>
               </p>
               <p>🎓 SLIIT - Software Engineering</p>
             </div>
