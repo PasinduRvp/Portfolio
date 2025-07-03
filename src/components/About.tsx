@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { GraduationCap, Code, Coffee, Users } from 'lucide-react';
 
@@ -20,8 +19,8 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,39 +38,94 @@ const About = () => {
 
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Profile Image */}
+            {/* Profile Image - Floating Card Style */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="relative"
+              style={{ perspective: '1200px' }}
             >
               <div className="relative w-80 h-80 mx-auto">
-                {/* Animated background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-full animate-pulse-slow"></div>
-                
-                {/* Profile image placeholder */}
-                <div className="relative w-full h-full rounded-full shadow-2xl overflow-hidden">
-                  <img
+                {/* Holographic Ring Effect */}
+                <motion.div
+                  animate={{ 
+                    rotateZ: [0, 360],
+                    scale: [1, 1.1, 1]
+                  }}
+                  transition={{ 
+                    duration: 8, 
+                    repeat: Infinity, 
+                    ease: "linear"
+                  }}
+                  className="absolute inset-0 rounded-full border-4 border-transparent"
+                  style={{
+                    background: 'conic-gradient(from 0deg, #3b82f6, #8b5cf6, #06b6d4, #10b981, #f59e0b, #ef4444, #3b82f6)',
+                    WebkitMask: 'radial-gradient(circle at center, transparent 75%, black 76%, black 100%)',
+                    mask: 'radial-gradient(circle at center, transparent 75%, black 76%, black 100%)'
+                  }}
+                />
+
+                {/* Floating Card Container */}
+                <motion.div
+                  animate={{
+                    rotateX: [0, 5, 0, -5, 0],
+                    rotateY: [0, 3, 0, -3, 0],
+                    y: [0, -10, 0, 10, 0]
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  whileHover={{
+                    rotateX: 15,
+                    rotateY: 15,
+                    scale: 1.05,
+                    transition: { duration: 0.3 }
+                  }}
+                  className="relative w-full h-full"
+                  style={{ 
+                    transformStyle: 'preserve-3d',
+                    filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3))'
+                  }}
+                >
+                  {/* Glass morphism background */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 to-black/5 backdrop-blur-md border border-white/20" />
+                  
+                  {/* Profile image */}
+                  <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white/30">
+                    <img
                       src="/pro6.jpeg"
                       alt="Profile"
                       className="w-full h-full object-cover"
                     />
-                </div>
+                    
+                    {/* Animated overlay */}
+                    <motion.div
+                      animate={{
+                        background: [
+                          'linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.2) 50%, transparent 60%)',
+                          'linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.2) 50%, transparent 60%)',
+                          'linear-gradient(225deg, transparent 40%, rgba(255,255,255,0.2) 50%, transparent 60%)',
+                          'linear-gradient(315deg, transparent 40%, rgba(255,255,255,0.2) 50%, transparent 60%)'
+                        ]
+                      }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                      className="absolute inset-0 rounded-full"
+                    />
+                  </div>
 
-                
-                {/* Floating decorations */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full opacity-60"
-                />
-                <motion.div
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                  className="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-600 rounded-full opacity-60"
-                />
+                  {/* 3D Depth indicator */}
+                  <div 
+                    className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-blue-600/20"
+                    style={{
+                      transform: 'translateZ(-20px) scale(0.95)',
+                      opacity: 0.6
+                    }}
+                  />
+                </motion.div>
               </div>
             </motion.div>
 
@@ -88,7 +142,7 @@ const About = () => {
               
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
                 <p>
-                  I'm a passionate Software Engineering student at the Sri Lanka Institute of Information Technology (SLIIT), having completed two years and earned a diploma. I’m currently pursuing my degree with an expected graduation in 2027.
+                  I'm a passionate Software Engineering student at the Sri Lanka Institute of Information Technology (SLIIT), having completed two years and earned a diploma. I'm currently pursuing my degree with an expected graduation in 2027.
                 </p>
                 
                 <p>
