@@ -307,7 +307,7 @@ const Hero = () => {
                   { icon: Linkedin, href: 'https://www.linkedin.com/in/pasindu-nimsara-vidanapathirana-a3b9a1371/', label: 'LinkedIn', color: 'hover:bg-blue-600' },
                   { icon: Mail, href: 'mailto:rvppasindu@gmail.com', label: 'Email', color: 'hover:bg-red-500' },
                   { icon: Instagram, href: 'https://www.instagram.com/__.rvp.pn.__/profilecard/?igsh=YW5tMmQ0MjB3YTRl/', label: 'Instagram', color: 'hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500' },
-                  { icon: Facebook, href: 'https://www.facebook.com/share/16rmG2nMNe/', label: 'Facebook', color: 'hover:bg-blue-700' }
+                  
                 ].map((social, index) => (
                   <motion.div
                     key={social.label}
