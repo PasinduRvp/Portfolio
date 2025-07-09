@@ -32,10 +32,10 @@ const Projects = () => {
       technologies: ['PHP', 'CSS', 'JavaScript', 'MySQL'],
       demoUrl: '#',
       githubUrl: 'https://github.com/PasinduRvp/Fashion_Store.git',
-      featured: true
+      featured: false
     },
     {
-      id: 5,
+      id: 4,
       title: 'Melody Mart Music Instrument Store',
       description: 'Developed a feature-rich mobile commerce app for musical instruments , with wishlist , cart , order tracking , secure authentication , and multi-option payment integration to enhance user shopping experience.',
       image: '/m1.png',
@@ -43,6 +43,26 @@ const Projects = () => {
       demoUrl: '#',
       githubUrl: 'https://github.com/PasinduRvp/Music_Instrument_Store.git',
       featured: false
+    },
+    {
+      id: 5,
+      title: 'PropertyLK Property Management System',
+      description: 'Developed a feature-rich Property Management System with user account management , product catalog , Review system , Report generator and secure session-based authentication.',
+      image: '/pro1.jpeg',
+      technologies: ['JAVA', 'MySQL'],
+      demoUrl: '#',
+      githubUrl: 'https://github.com/PasinduRvp/Property-Management-System.git',
+      featured: false
+    },
+    {
+      id: 6,
+      title: 'Portfolio Website',
+      description: 'Developed a my personal portfolio website to showcase my skills, projects, educations and contact options. The site features a modern design, responsive layout, and interactive elements to enhance user engagement.',
+      image: '/pro7.png',
+      technologies: ['JAVA', 'MySQL'],
+      demoUrl: '#',
+      githubUrl: 'https://github.com/PasinduRvp/Portfolio.git',
+      featured: true
     }
   ];
 
