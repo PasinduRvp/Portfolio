@@ -88,12 +88,6 @@ const Contact = () => {
       label: 'Instagram',
       href: 'https://www.instagram.com/__.rvp.pn.__/profilecard/?igsh=YW5tMmQ0MjB3YTRl/',
       color: 'hover:bg-pink-500 hover:text-white'
-    },
-    {
-      icon:Facebook,
-      label: 'Facebook',
-      href: 'https://www.facebook.com/share/16rmG2nMNe/',
-      color: 'hover:bg-blue-700 hover:text-white'
     }
   ];
 
