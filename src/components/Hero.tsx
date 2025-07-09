@@ -304,7 +304,7 @@ const Hero = () => {
               <div className="flex flex-col space-y-6 relative z-10">
                 {[
                   { icon: Github, href: 'https://github.com/PasinduRvp?tab=repositories', label: 'GitHub', color: 'hover:bg-gray-800' },
-                  { icon: Linkedin, href: 'https://www.linkedin.com/in/pasindu-nimsara-vidanapathirana-a3b9a1371/', label: 'LinkedIn', color: 'hover:bg-blue-600' },
+                  { icon: Linkedin, href: 'https://www.linkedin.com/in/pasindu-vidanapathirana-a3b9a1371/', label: 'LinkedIn', color: 'hover:bg-blue-600' },
                   { icon: Mail, href: 'mailto:rvppasindu@gmail.com', label: 'Email', color: 'hover:bg-red-500' },
                   { icon: Instagram, href: 'https://www.instagram.com/__.rvp.pn.__/profilecard/?igsh=YW5tMmQ0MjB3YTRl/', label: 'Instagram', color: 'hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500' },
                   
