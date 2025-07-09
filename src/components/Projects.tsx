@@ -59,7 +59,7 @@ const Projects = () => {
       title: 'Portfolio Website',
       description: 'Developed a my personal portfolio website to showcase my skills, projects, educations and contact options. The site features a modern design, responsive layout, and interactive elements to enhance user engagement.',
       image: '/pro7.png',
-      technologies: ['JAVA', 'MySQL'],
+      technologies: ['React', 'Tailwind CSS'],
       demoUrl: '#',
       githubUrl: 'https://github.com/PasinduRvp/Portfolio.git',
       featured: true
