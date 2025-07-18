@@ -146,7 +146,7 @@ const About = () => {
                 </p>
                 
                 <p>
-                  I specialize in full-stack web development with hands-on experience in technologies like React, Node.js, and cloud platforms. I also have a strong grasp of mobile app development using XML, Kotlin, and Android Studio, enabling me to create intuitive and responsive apps.
+                  I specialize in full-stack web development with hands-on experience in technologies like React, Node.js, java , PHP and cloud platforms. I also have a strong grasp of mobile app development using XML, Kotlin, and Android Studio, enabling me to create intuitive and responsive apps.
                 </p>
                 
                 <p>
