@@ -63,6 +63,16 @@ const Projects = () => {
       demoUrl: '#',
       githubUrl: 'https://github.com/PasinduRvp/Portfolio.git',
       featured: true
+    },
+    {
+      id: 7,
+      title: 'Academic Performance Dashboard',
+      description: 'A modern GPA calculator web app that allows students to input course grades, track academic performance visually, and download a personalized academic transcript with GPA summary.',
+      image: '/gpa1.jpg',
+      technologies: ['React', 'Tailwind CSS'],
+      demoUrl: 'https://gpa-calculator-ten-woad.vercel.app/',
+      githubUrl: 'https://github.com/PasinduRvp/GPA-Calculator.git',
+      featured: true
     }
   ];
 
