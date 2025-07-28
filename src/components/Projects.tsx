@@ -49,7 +49,7 @@ const Projects = () => {
       title: 'PropertyLK Property Management System',
       description: 'Developed a feature-rich Property Management System with user account management , product catalog , Review system , Report generator and secure session-based authentication.',
       image: '/pro1.jpeg',
-      technologies: ['JAVA', 'MySQL'],
+      technologies: ['JAVA', 'Tomcat'],
       demoUrl: '#',
       githubUrl: 'https://github.com/PasinduRvp/Property-Management-System.git',
       featured: false
