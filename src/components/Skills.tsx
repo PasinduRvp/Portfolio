@@ -29,8 +29,8 @@ const Skills = () => {
       title: 'Backend Development',
       skills: [
         { name: 'Node.js', level: 90, color: 'bg-red-600' },
-        { name: 'Express.js', level: 80, color: 'bg-green-600' },
-        { name: 'Java', level: 80, color: 'bg-gray-700' },
+        { name: 'Express.js', level: 90, color: 'bg-green-600' },
+        { name: 'Java', level: 90, color: 'bg-gray-700' },
         { name: 'PHP', level: 90, color: 'bg-pink-700' }
       ]
     },
@@ -45,7 +45,7 @@ const Skills = () => {
     database: {
       title: 'Database Management',
       skills: [
-        { name: 'MongoDB', level: 90, color: 'bg-red-600' },
+        { name: 'MongoDB', level: 95, color: 'bg-red-600' },
         { name: 'MySQL', level: 95, color: 'bg-green-600' },
         { name: 'Tomcat', level: 95, color: 'bg-gray-700' },
         { name: 'SQLite', level: 95, color: 'bg-pink-700' },
