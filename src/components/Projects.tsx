@@ -16,6 +16,16 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: 'Mini Cabs & Tours – Tourism Transport Website',
+      description: 'Developed a fully responsive tourism transport website for a Sri Lanka–based company, featuring service showcases, smooth animations, and mobile-friendly design to enhance user engagement and professionalism.'
+      image: '/carweb.png',
+      technologies: ['Next.js', 'Vanilla.js', 'Tailwind CSS', 'Vercel', 'SEO Optimization'],
+      demoUrl: 'https://www.minicabstours.com/',
+      githubUrl: 'https://github.com/PasinduRvp/Tourism_Service',
+      featured: true
+    },
+    {
+      id: 3,
       title: 'Financial Tracking App',
       description: 'Designed and developed a personal finance management Android app with income/expense tracking , budgeting , and spending insights. Includes smart notifications , data persistence , and optional backup/restore functionality.',
       image: '/f1.png',
@@ -25,7 +35,7 @@ const Projects = () => {
       featured: true
     },
     {
-      id: 3,
+      id: 4,
       title: 'NOURA Fashion Store',
       description: 'Developed a full-featured online fashion store with user account management , product catalog , shopping cart , Review system and secure session-based authentication.',
       image: '/fa1.png',
@@ -35,7 +45,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 4,
+      id: 5,
       title: 'Melody Mart Music Instrument Store',
       description: 'Developed a feature-rich mobile commerce app for musical instruments , with wishlist , cart , order tracking , secure authentication , and multi-option payment integration to enhance user shopping experience.',
       image: '/m1.png',
@@ -45,7 +55,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 5,
+      id: 6,
       title: 'PropertyLK Property Management System',
       description: 'Developed a feature-rich Property Management System with user account management , product catalog , Review system , Report generator and secure session-based authentication.',
       image: '/pro1.jpeg',
@@ -55,21 +65,21 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 6,
+      id: 7,
       title: 'Portfolio Website',
       description: 'Developed a my personal portfolio website to showcase my skills, projects, educations and contact options. The site features a modern design, responsive layout, and interactive elements to enhance user engagement.',
       image: '/pro7.png',
-      technologies: ['React', 'Tailwind CSS'],
+      technologies: ['React', 'Tailwind CSS', 'Vercel'],
       demoUrl: '#',
       githubUrl: 'https://github.com/PasinduRvp/Portfolio.git',
       featured: true
     },
     {
-      id: 7,
+      id: 8,
       title: 'Academic Performance Dashboard',
       description: 'A modern GPA calculator web app that allows students to input course grades, track academic performance visually, and download a personalized academic transcript with GPA summary.',
       image: '/gpa1.jpg',
-      technologies: ['React', 'Tailwind CSS'],
+      technologies: ['React', 'Tailwind CSS', 'Vercel'],
       demoUrl: 'https://gpa-calculator-ten-woad.vercel.app/',
       githubUrl: 'https://github.com/PasinduRvp/GPA-Calculator.git',
       featured: true
