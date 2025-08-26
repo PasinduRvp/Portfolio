@@ -32,7 +32,7 @@ const Projects = () => {
       technologies: ['Kotlin', 'XML', 'SQLite'],
       demoUrl: '#',
       githubUrl: 'https://github.com/PasinduRvp/Financial_Tracking_Application.git',
-      featured: true
+      featured: false
     },
     {
       id: 4,
@@ -75,7 +75,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 8,
+      id: 9,
       title: 'Academic Performance Dashboard',
       description: 'A modern GPA calculator web app that allows students to input course grades, track academic performance visually, and download a personalized academic transcript with GPA summary.',
       image: '/gpa1.jpg',
@@ -85,7 +85,7 @@ const Projects = () => {
       featured: true
     },
     {
-      id: 9,
+      id: 8,
       title: ' Financial Dashboard. ( Client Project )',
       description: 'Developed a responsive financial report dashboard with interactive charts, real-time calculations, PDF export, and a clean, user-friendly interface.',
       image: '/fin1.jpg',
