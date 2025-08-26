@@ -16,7 +16,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Mini Cabs & Tours – Tourism Transport Website',
+      title: 'Mini Cabs & Tours – Tourism Transport Website ( Client Project )',
       description: 'Developed a fully responsive tourism transport website for a Sri Lanka–based company, featuring service showcases, smooth animations, and mobile-friendly design to enhance user engagement and professionalism.',
       image: '/carweb.png',
       technologies: ['Next.js', 'Vanilla.js', 'Tailwind CSS', 'Vercel', 'SEO Optimization'],
