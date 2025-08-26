@@ -86,7 +86,7 @@ const Projects = () => {
     },
     {
       id: 8,
-      title: ' Financial Dashboard. ( Client Project )',
+      title: ' Financial Dashboard ( Client Project )',
       description: 'Developed a responsive financial report dashboard with interactive charts, real-time calculations, PDF export, and a clean, user-friendly interface.',
       image: '/fin1.png',
       technologies: ['Next.js', 'Tailwind CSS', 'Vercel'],
