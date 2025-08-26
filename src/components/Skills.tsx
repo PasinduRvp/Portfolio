@@ -17,11 +17,12 @@ const Skills = () => {
     frontend: {
       title: 'Frontend Development',
       skills: [
-        { name: 'React', level: 90, color: 'bg-red-600' },
-        { name: 'React', level: 90, color: 'bg-orange-600' },
+        { name: 'React.js', level: 90, color: 'bg-red-600' },
+        { name: 'Next.js', level: 90, color: 'bg-orange-600' },
         { name: 'HTML', level: 95, color: 'bg-green-600' },
         { name: 'Tailwind CSS', level: 95, color: 'bg-gray-700' },
         { name: 'CSS', level: 95, color: 'bg-pink-700' },
+        { name: 'Vanilla.js', level: 95, color: 'bg-blue-600' },
         { name: 'JavaScript', level: 90, color: 'bg-indigo-700' }
       ]
     },
