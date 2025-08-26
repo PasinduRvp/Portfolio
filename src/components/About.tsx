@@ -4,14 +4,14 @@ import { GraduationCap, Code, Coffee, Users } from 'lucide-react';
 const About = () => {
   const stats = [
     { icon: GraduationCap, label: 'Education', value: '3rd Year Student' },
-    { icon: Code, label: 'Projects', value: '6+ Completed' },
+    { icon: Code, label: 'Projects', value: '10+ Completed' },
     { icon: Coffee, label: 'Coffee Cups', value: '500+ Consumed' },
-    { icon: Users, label: 'Team Projects', value: '3+ Collaborations' }
+    { icon: Users, label: 'Team Projects', value: '4+ Collaborations' }
   ];
 
   const interests = [
     'Web Development',
-    'Mobile Apps',
+    'Mobile App Development',
     'UI/UX Design',
     'Cloud Computing',
     'Machine Learning',
