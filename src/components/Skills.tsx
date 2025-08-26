@@ -18,6 +18,7 @@ const Skills = () => {
       title: 'Frontend Development',
       skills: [
         { name: 'React', level: 90, color: 'bg-red-600' },
+        { name: 'React', level: 90, color: 'bg-orange-600' },
         { name: 'HTML', level: 95, color: 'bg-green-600' },
         { name: 'Tailwind CSS', level: 95, color: 'bg-gray-700' },
         { name: 'CSS', level: 95, color: 'bg-pink-700' },
@@ -59,6 +60,7 @@ const Skills = () => {
         { name: 'VS Code', level: 95, color: 'bg-green-600' },
         { name: 'Andoid Studio', level: 95, color: 'bg-gray-700' },
         { name: 'Eclipse', level: 95, color: 'bg-pink-700' },
+        { name: 'SEO', level: 90, color: 'bg-orange-600' },
         { name: 'Figma', level: 95, color: 'bg-indigo-700' },
       ]
     }
