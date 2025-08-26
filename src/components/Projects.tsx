@@ -72,7 +72,7 @@ const Projects = () => {
       technologies: ['React', 'Tailwind CSS', 'Vercel'],
       demoUrl: '#',
       githubUrl: 'https://github.com/PasinduRvp/Portfolio.git',
-      featured: true
+      featured: false
     },
     {
       id: 8,
@@ -82,6 +82,16 @@ const Projects = () => {
       technologies: ['React', 'Tailwind CSS', 'Vercel'],
       demoUrl: 'https://gpa-calculator-ten-woad.vercel.app/',
       githubUrl: 'https://github.com/PasinduRvp/GPA-Calculator.git',
+      featured: true
+    },
+    {
+      id: 9,
+      title: ' Financial Dashboard. ( Client Project )',
+      description: 'Developed a responsive financial report dashboard with interactive charts, real-time calculations, PDF export, and a clean, user-friendly interface.',
+      image: '/fin1.jpg',
+      technologies: ['Next.js', 'Tailwind CSS', 'Vercel'],
+      demoUrl: 'https://financial-analysis-eight.vercel.app/',
+      githubUrl: 'https://github.com/PasinduRvp/Financial-Analysis',
       featured: true
     }
   ];
