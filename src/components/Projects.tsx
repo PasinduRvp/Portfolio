@@ -19,7 +19,7 @@ const Projects = () => {
       title: 'Mini Cabs & Tours – Tourism Transport Website ( Client Project )',
       description: 'Developed a fully responsive tourism transport website for a Sri Lanka–based company, featuring service showcases, smooth animations, and mobile-friendly design to enhance user engagement and professionalism.',
       image: '/carweb.png',
-      technologies: ['Next.js', 'Vanilla.js', 'Tailwind CSS', 'Vercel', 'SEO Optimization'],
+      technologies: ['Next.js', 'Vanilla.js', 'Tailwind CSS', 'Vercel', 'EmailJs' , 'SEO Optimization'],
       demoUrl: 'https://www.minicabstours.com/',
       githubUrl: 'https://github.com/PasinduRvp/Tourism_Service',
       featured: true
@@ -75,23 +75,63 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 9,
+      id: 8,
       title: 'Academic Performance Dashboard',
       description: 'A modern GPA calculator web app that allows students to input course grades, track academic performance visually, and download a personalized academic transcript with GPA summary.',
       image: '/gpa1.jpg',
       technologies: ['React', 'Tailwind CSS', 'Vercel'],
       demoUrl: 'https://gpa-calculator-ten-woad.vercel.app/',
       githubUrl: 'https://github.com/PasinduRvp/GPA-Calculator.git',
-      featured: true
+      featured: false
     },
     {
-      id: 8,
-      title: ' Financial Dashboard ( Client Project )',
+      id: 9,
+      title: 'Financial Dashboard ( Client Project )',
       description: 'Developed a responsive financial report dashboard with interactive charts, real-time calculations, PDF export, and a clean, user-friendly interface.',
       image: '/fin1.png',
       technologies: ['Next.js', 'Tailwind CSS', 'Vercel'],
       demoUrl: 'https://financial-analysis-eight.vercel.app/',
       githubUrl: 'https://github.com/PasinduRvp/Financial-Analysis',
+      featured: false
+    },
+    {
+      id: 10,
+      title: 'BookNest - Library Management System',
+      description: 'Developed a comprehensive library management system with book cataloging, user accounts, borrowing/returning functionality, and an admin dashboard for efficient library operations.',
+      image: '/library.png',
+      technologies: ['React.js' , 'Express.js' , 'Node.js', 'Tailwind CSS', 'MongoDB'],
+      demoUrl: '#',
+      githubUrl: 'https://github.com/PasinduRvp/Library-Management-System.git',
+      featured: true
+    },
+    {
+      id: 11,
+      title: 'InfraGuard - Infrastructure Issue Report & Management',
+      description: 'Developed a citizen reporting app for infrastructure issues with photo upload, GPS auto-capture, and AI detection, featuring an authority dashboard, real-time notifications, and analytics for efficient issue management.',
+      image: '/infraguard1.png',
+      technologies: ['Flutter' , 'Firebase' , 'Map API', 'AI Image Detection'],
+      demoUrl: '#',
+      githubUrl: 'https://github.com/PasinduRvp/Library-Management-System.git',
+      featured: true
+    },
+    {
+      id: 12,
+      title: 'Smart Waste Management app',
+      description: 'Developed a Smart Waste Management app that enables residents to schedule special pickups, track daily waste collection via sensor-integrated bins, process digital payments and rebates, and generate analytics-driven reports for optimized waste management operations.',
+      image: '/ecocollect.png',
+      technologies: ['Flutter' , 'Firebase' , 'Map API', 'AI Image Detection' , 'EmailJs'],
+      demoUrl: '#',
+      githubUrl: 'https://github.com/PasinduRvp/Smart_Waste_Management_System.git',
+      featured: true
+    },
+    {
+      id: 13,
+      title: 'CEYLON HOLIDAY TRIP - Client Project',
+      description: 'Developed a travel and tour website enabling users to book customized Sri Lanka holidays with curated itineraries, hotel selection, transport, and guided experiences for a seamless travel experience.',
+      image: '/ukweb.png',
+      technologies: ['React.js', 'Vanilla.js', 'Tailwind CSS', 'Vercel', 'Namecheap' , 'EmailJs' , 'SEO Optimization'],
+      demoUrl: 'https://www.ceylonholidaytrip.com/',
+      githubUrl: 'https://github.com/PasinduRvp/Tourism-Hotel-Management.git',
       featured: true
     }
   ];

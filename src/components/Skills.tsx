@@ -39,7 +39,8 @@ const Skills = () => {
     mobile: {
       title: 'Mobile Development',
       skills: [
-        { name: 'XML', level: 95, color: 'bg-red-600' },
+        { name: 'Flutter', level: 95, color: 'bg-red-600' },
+        { name: 'XML', level: 95, color: 'bg-gray-600' },
         { name: 'Kotlin', level: 90, color: 'bg-green-600' },
         
       ]
@@ -48,8 +49,9 @@ const Skills = () => {
       title: 'Database Management',
       skills: [
         { name: 'MongoDB', level: 95, color: 'bg-red-600' },
+        { name: 'Firebase', level: 95, color: 'bg-gray-600' },
         { name: 'MySQL', level: 95, color: 'bg-green-600' },
-        { name: 'Tomcat', level: 95, color: 'bg-gray-700' },
+        { name: 'Tomcat', level: 95, color: 'bg-indigo-700' },
         { name: 'SQLite', level: 95, color: 'bg-pink-700' },
         
       ]
@@ -59,6 +61,7 @@ const Skills = () => {
       skills: [
         { name: 'GitHub', level: 90, color: 'bg-red-600' },
         { name: 'VS Code', level: 95, color: 'bg-green-600' },
+        { name: 'Vercel', level: 95, color: 'bg-blue-600' },
         { name: 'Andoid Studio', level: 95, color: 'bg-gray-700' },
         { name: 'Eclipse', level: 95, color: 'bg-pink-700' },
         { name: 'SEO', level: 90, color: 'bg-orange-600' },
