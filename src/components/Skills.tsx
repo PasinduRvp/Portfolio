@@ -18,7 +18,8 @@ const Skills = () => {
       title: 'Frontend Development',
       skills: [
         { name: 'React.js', level: 90, color: 'bg-red-600' },
-        { name: 'Next.js', level: 90, color: 'bg-orange-600' },
+        { name: 'Next.js', level: 90, color: 'bg-yellow-600' },
+        { name: 'Angular', level: 90, color: 'bg-orange-600' },
         { name: 'HTML', level: 95, color: 'bg-green-600' },
         { name: 'Tailwind CSS', level: 95, color: 'bg-gray-700' },
         { name: 'CSS', level: 95, color: 'bg-pink-700' },
@@ -33,6 +34,7 @@ const Skills = () => {
         { name: 'Node.js', level: 90, color: 'bg-red-600' },
         { name: 'Express.js', level: 90, color: 'bg-green-600' },
         { name: 'Java', level: 90, color: 'bg-gray-700' },
+        { name: 'Spring Boot', level: 90, color: 'bg-indigo-700' },
         { name: 'PHP', level: 90, color: 'bg-pink-700' }
       ]
     },
@@ -61,6 +63,7 @@ const Skills = () => {
       skills: [
         { name: 'GitHub', level: 90, color: 'bg-red-600' },
         { name: 'VS Code', level: 95, color: 'bg-green-600' },
+        { name: 'AWS', level: 90, color: 'bg-yellow-600' },
         { name: 'Vercel', level: 95, color: 'bg-blue-600' },
         { name: 'Andoid Studio', level: 95, color: 'bg-gray-700' },
         { name: 'Eclipse', level: 95, color: 'bg-pink-700' },
@@ -192,7 +195,9 @@ const Skills = () => {
           >
             <h3 className="text-2xl font-bold text-foreground mb-4">Always Learning</h3>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              I am continuously expanding my technical expertise and staying current with emerging technologies. My current focus includes advanced React patterns, Java development, and cloud-native architecture.
+              I am continuously enhancing my technical skill set with a strong focus on scalable 
+              application design, Java development, and cloud-native architectures, while actively 
+              exploring modern React patterns and technologies that support data-driven and AI-enabled systems.
             </p>
           </motion.div>
         </div>

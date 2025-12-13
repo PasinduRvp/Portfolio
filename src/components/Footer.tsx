@@ -14,6 +14,8 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Education', href: '#education' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' }
@@ -40,10 +42,11 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-primary mb-4">Pasindu Rvp</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4">Pasindu Vidanapathirana</h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Software Engineering student passionate about creating innovative 
-              web solutions and learning cutting-edge technologies.
+              Software Engineering student and Data & AI Research Intern at Allianz, 
+              passionate about building innovative, data-driven web solutions and continuously 
+              learning cutting-edge technologies.
             </p>
             
             {/* Social Links */}
@@ -163,14 +166,10 @@ const Footer = () => {
                 📧 <a href="mailto:rvppasindu@gmail.com" className="hover:underline">rvppasindu@gmail.com</a>
               </p>
               <p>🎓 SLIIT - Software Engineering</p>
+              <p>👨‍💻 Allianz - Data and AI Research | Intern</p>
             </div>
             
-            <div className="mt-6 p-4 bg-background rounded-lg border border-border">
-              <p className="text-sm text-muted-foreground">
-                💼 <strong>Currently:</strong> Open to internship opportunities 
-                and collaborative projects
-              </p>
-            </div>
+            
           </motion.div>
         </div>
 
@@ -182,7 +181,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="border-t border-border mt-8 pt-8"
         >
-          <div className="w-full flex justify-center items-center text-muted-foreground text-sm mb-4 md:mb-0">
+          <div className="w-full flex justify-center items-center text-muted-foreground text-xl mb-4 md:mb-0">
             <span>© {currentYear} Pasindu Vidanapathirana</span>
           </div>
 

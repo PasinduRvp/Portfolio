@@ -7,6 +7,7 @@ import About from '../components/About';
 import Education from '../components/Education';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
+import Experience from '../components/Experience';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { Button } from '@/components/ui/button';
@@ -42,6 +43,7 @@ const Index = () => {
         <Hero />
         <About />
         <Education />
+        <Experience />
         <Skills />
         <Projects />
         <Contact />

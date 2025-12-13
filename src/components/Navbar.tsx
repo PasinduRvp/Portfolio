@@ -15,7 +15,7 @@ const Navbar = () => {
       setScrolled(window.scrollY > 50);
       
       // Get all sections
-      const sections = ['home', 'about', 'education', 'skills', 'projects', 'contact'];
+      const sections = ['home', 'about', 'education', 'experience' , 'skills', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100; // Offset for better detection
       
       // Find the current section
@@ -47,6 +47,7 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Education', href: '#education' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' }

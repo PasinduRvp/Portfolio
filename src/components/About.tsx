@@ -5,17 +5,18 @@ const About = () => {
   const stats = [
     { icon: GraduationCap, label: 'Education', value: '3rd Year Student' },
     { icon: Code, label: 'Projects', value: '10+ Completed' },
-    { icon: Coffee, label: 'Coffee Cups', value: '500+ Consumed' },
+    { icon: Coffee, label: 'Coffee Cups', value: '1000+ Consumed' },
     { icon: Users, label: 'Team Projects', value: '4+ Collaborations' }
   ];
 
   const interests = [
+    'Data & AI Research',
     'Web Development',
     'Mobile App Development',
     'UI/UX Design',
     'Cloud Computing',
     'Machine Learning',
-    'Artificial Intelligence'
+    
   ];
 
   return (
@@ -136,21 +137,34 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-3xl font-bold text-foreground mb-6">
-                Software Engineering Student at SLIIT
-              </h3>
+              <h6 className="text-2xl font-bold text-foreground mb-6">
+                Software Engineering Undergraduate |<br></br> Data & AI Research Intern at Allianz
+              </h6>
               
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
                 <p>
-                  I'm a passionate Software Engineering student at the Sri Lanka Institute of Information Technology (SLIIT), having completed two years and earned a diploma. I'm currently pursuing my degree with an expected graduation in 2027.
+                  I am a Software Engineering undergraduate at the Sri Lanka Institute of Information Technology (SLIIT), 
+                  currently working as a Data & AI Research Intern at Allianz Insurance Lanka Limited. 
+                  I have completed two years of academic study and earned a diploma, and 
+                  I am continuing my degree with an expected graduation in 2027.
                 </p>
                 
                 <p>
-                  I specialize in full-stack web development with hands-on experience in technologies like MERN, java , PHP and cloud platforms. I also have a strong grasp of mobile app development using XML, Kotlin, and Android Studio, enabling me to create intuitive and responsive apps.
+                  My technical interests lie at the intersection of software engineering, data, and artificial intelligence. 
+                  I have hands-on experience in full-stack development using technologies such as MERN, Java, and PHP, 
+                  along with experience working with cloud-based platforms. These skills support my work in designing, 
+                  integrating, and experimenting with data-driven systems.
+
+                  In addition, I have a strong foundation in mobile application development using Flutter , Kotlin, 
+                  XML, and Android Studio, and I have applied AI concepts in projects involving data analysis, 
+                  automation, and intelligent decision-making.
                 </p>
                 
                 <p>
-                  Beyond coding, I enjoy exploring emerging technologies, contributing to open-source projects, and collaborating on innovative solutions with fellow developers.
+                  As a Data & AI Research Intern, I enjoy exploring machine learning concepts, 
+                  data processing, and applied AI solutions, while collaborating with cross-functional 
+                  teams to build scalable, real-world systems. I am continuously learning and motivated 
+                  to apply research-driven approaches to practical industry challenges.
                 </p>
               </div>
 

@@ -10,10 +10,10 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
+    'Data & AI Engineer',
     'Software Engineer',
     'Full Stack Developer',
-    'Mobile Application Developer',
-    'Problem Solver'
+    'Mobile Application Developer'
   ];
 
   // Typewriter effect
@@ -50,7 +50,7 @@ const Hero = () => {
       transition: {
         duration: 4,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: "easeInOut" as const
       }
     }
   };
@@ -138,9 +138,9 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                className="text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
               >
-                Software Engineering undergraduate at SLIIT with a passion for full-stack development and emerging technologies. Actively seeking an internship to apply my skills and gain hands-on industry experience.
+                Data & AI Research Intern @Allianz <br></br>Software Engineering Undergraduate @SLIIT
               </motion.p>
 
               {/* CTA Buttons */}
@@ -233,7 +233,7 @@ const Hero = () => {
                 >
                   {/* Profile image */}
                   <img
-                    src="/p1.png"
+                    src="/me2.jpg"
                     alt="Pasindu Vidanapathirana"
                     className="w-full h-full object-cover"
                   />
