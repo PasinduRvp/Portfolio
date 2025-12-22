@@ -111,7 +111,7 @@ const Projects = () => {
       image: '/infraguard1.png',
       technologies: ['Flutter' , 'Firebase' , 'Map API', 'AI Image Detection'],
       demoUrl: '#',
-      githubUrl: 'https://github.com/PasinduRvp/Library-Management-System.git',
+      githubUrl: 'https://github.com/PasinduRvp/Real-Time-Infrastructure-Issue-Reporting-App.git',
       featured: true
     },
     {
