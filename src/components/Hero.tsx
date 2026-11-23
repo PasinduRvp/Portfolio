@@ -10,10 +10,11 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = [
-    'Data & AI Engineer',
+    'Associate AI Engineer',
+    'Cloud Automation Engineer',
     'Software Engineer',
     'Full Stack Developer',
-    'Mobile Application Developer'
+    'Mobile Application Developer',
   ];
 
   // Typewriter effect
