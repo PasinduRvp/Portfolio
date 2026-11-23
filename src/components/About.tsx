@@ -3,10 +3,10 @@ import { GraduationCap, Code, Coffee, Users } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: GraduationCap, label: 'Education', value: '3rd Year Student' },
-    { icon: Code, label: 'Projects', value: '10+ Completed' },
+    { icon: GraduationCap, label: 'Education', value: '4th Year Student' },
+    { icon: Code, label: 'Projects', value: '30+ Completed' },
     { icon: Coffee, label: 'Coffee Cups', value: '1000+ Consumed' },
-    { icon: Users, label: 'Team Projects', value: '4+ Collaborations' }
+    { icon: Users, label: 'Team Projects', value: '10+ Collaborations' }
   ];
 
   const interests = [
