@@ -61,7 +61,7 @@ const Hero = () => {
     
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'Pasindu_Vidanapathirana_CV.pdf';
+    link.download = 'Pasindu_Nimsara_Vidanapathirana_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -116,7 +116,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-5xl md:text-7xl font-bold text-foreground mb-6"
               >
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-700">Pasindu</span>{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-700">Pasindu Nimsara</span>{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-700">
                   Vidanapathirana
                 </span>
@@ -140,7 +140,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
               >
-                Data & AI Research Intern @Allianz <br></br>Software Engineering Undergraduate @SLIIT
+                Associate AI Engineer @Allianz <br></br>Software Engineering Undergraduate @SLIIT
               </motion.p>
 
               {/* CTA Buttons */}
@@ -234,7 +234,7 @@ const Hero = () => {
                   {/* Profile image */}
                   <img
                     src="/me2.jpg"
-                    alt="Pasindu Vidanapathirana"
+                    alt="Pasindu Nimsara Vidanapathirana"
                     className="w-full h-full object-cover"
                   />
                   

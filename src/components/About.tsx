@@ -121,22 +121,23 @@ const About = () => {
             >
               <div className="mb-6">
                 <h3 className="text-xl font-bold text-foreground mb-4">
-                  Software Engineering Undergraduate | Data & AI Research Intern at Allianz
+                  Software Engineering Undergraduate | Associate AI Engineer at Allianz
                 </h3>
                 
                 <div className="space-y-4 text-muted-foreground leading-relaxed mb-6">
                   <p className="text-base">
                     I am a Software Engineering undergraduate at the Sri Lanka Institute of Information Technology (SLIIT), 
-                    currently working as a Data & AI Research Intern at Allianz Insurance Lanka Limited. 
+                    currently working as an Associate AI Engineer at Allianz Insurance Lanka Limited, following
+                    my experience as an Associate Software Engineer and Data & AI Research Intern.
                     I have completed two years of academic study and earned a diploma, and 
                     I am continuing my degree with an expected graduation in 2027.
                   </p>
                   
                   <p className="text-base">
-                    My technical interests lie at the intersection of software engineering, data, and artificial intelligence. 
-                    I have hands-on experience in full-stack development using technologies such as MERN, Java, and PHP, 
-                    along with experience working with cloud-based platforms. These skills support my work in designing, 
-                    integrating, and experimenting with data-driven systems.
+                    My technical interests focus on software engineering, cloud-native development, and practical
+                    applications of artificial intelligence. I have hands-on experience building full-stack systems
+                    with AWS, Spring Boot, Angular, Next.js, MERN, Java, and PHP. This experience supports my work
+                    in developing scalable backend services, cloud automation solutions, and modern web applications.
                   </p>
                   
                   <p className="text-base">

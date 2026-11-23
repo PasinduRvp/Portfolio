@@ -42,10 +42,10 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-primary mb-4">Pasindu Vidanapathirana</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4">Pasindu Nimsara Vidanapathirana</h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Software Engineering student and Data & AI Research Intern at Allianz, 
-              passionate about building innovative, data-driven web solutions and continuously 
+              Associate AI Engineer at Allianz and Software Engineering student, passionate about
+              building innovative, data-driven web solutions and continuously
               learning cutting-edge technologies.
             </p>
             
@@ -166,7 +166,7 @@ const Footer = () => {
                 📧 <a href="mailto:rvppasindu@gmail.com" className="hover:underline">rvppasindu@gmail.com</a>
               </p>
               <p>🎓 SLIIT - Software Engineering</p>
-              <p>👨‍💻 Allianz - Data and AI Research | Intern</p>
+              <p>👨‍💻 Allianz - Associate AI Engineer</p>
             </div>
             
             
@@ -182,7 +182,7 @@ const Footer = () => {
           className="border-t border-border mt-8 pt-8"
         >
           <div className="w-full flex justify-center items-center text-muted-foreground text-xl mb-4 md:mb-0">
-            <span>© {currentYear} Pasindu Vidanapathirana</span>
+            <span>© {currentYear} Pasindu Nimsara Vidanapathirana</span>
           </div>
 
         </motion.div>
